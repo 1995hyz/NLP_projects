@@ -31,7 +31,7 @@ def cky_parse(words, grammar):
         word = words[j-1]
         if word in grammar:
             for rule in grammar[word]:
-                cell = TableCell(prod=rule, cell_type=0, comp1=(word, 0, 0), comp2=(None, 0, 0))
+                cell = TableCell(prod=rule, cell_type=0, comp1=(word, None), comp2=(None, None))
                 table[j-1][j].append(cell)
         else:
             return None
